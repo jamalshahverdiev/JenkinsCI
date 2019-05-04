@@ -1,0 +1,20 @@
+pipeline {
+  agent any
+  stages {
+    stage('Source') { // Get code
+      steps {
+        // get code from our Git repository
+        git 'https://github.com/brentlaster/roarv2'
+      }
+    }
+    stage('Compile') { // Compile and do unit testing
+      tools {
+        gradle 'gradle4'
+      }
+      steps {
+        // run Gradle to execute compile and unit testing
+        sh 'gradle clean compileJava test'
+      }
+    }
+  }
+}
