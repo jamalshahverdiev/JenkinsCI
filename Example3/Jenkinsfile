@@ -9,7 +9,7 @@ pipeline {
     }
     stage('Compile') { // Compile and do unit testing
       tools {
-        gradle 'gradle4'
+        gradle 'gradle'
       }
       steps {
         // run Gradle to execute compile and unit testing
