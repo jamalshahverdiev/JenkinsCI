@@ -1,4 +1,7 @@
 pipeline {
+  dir("Example6") {
+    sh "pwd"
+  } 
   agent {
     dockerfile {
       /*
