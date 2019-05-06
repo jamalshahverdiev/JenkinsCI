@@ -1,8 +1,6 @@
 pipeline {
   agent {
-    dir("Example6") {
-      sh "pwd"
-    }
+    dir("${JENKINS_HOME}/workspace")
     dockerfile {
       /*
        * This assumes that a "Dockerfile" is in the current workspace
