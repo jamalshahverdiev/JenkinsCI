@@ -12,6 +12,9 @@ pipeline {
   //}
   stages {
     stage("Create Backend") {
+      dir("Example6") {
+         sh "pwd"
+      }
       agent {
         dockerfile {
           filename "Example6/Dockerfile"
