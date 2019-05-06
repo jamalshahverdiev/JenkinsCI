@@ -12,10 +12,8 @@ pipeline {
   //}
   stages {
     stage("Create Backend") {
-      dir("Example6") {
-         sh "pwd"
-      }
       agent {
+        dir("Example6") { sh "pwd" }
         dockerfile {
           filename "Example6/Dockerfile"
           args "-v /tmp:/tmp -p 5000:5000"
