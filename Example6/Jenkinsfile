@@ -1,8 +1,8 @@
 pipeline {
-  dir("Example6") {
-    sh "pwd"
-  } 
   agent {
+    dir("Example6") {
+      sh "pwd"
+    }
     dockerfile {
       /*
        * This assumes that a "Dockerfile" is in the current workspace
