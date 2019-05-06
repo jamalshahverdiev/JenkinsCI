@@ -9,8 +9,8 @@ pipeline {
     }
   }
   stages {
-    dir("${JENKINS_HOME}/workspace/Example6")  
     stage("foo") {
+      dir("${JENKINS_HOME}/workspace/Example6")
       steps {
         sh 'cat /app/index.py'
         sh 'echo "The answer is 42"'
