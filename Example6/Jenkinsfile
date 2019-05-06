@@ -1,6 +1,5 @@
 pipeline {
   agent {
-    dir("${JENKINS_HOME}/workspace")
     dockerfile {
       /*
        * This assumes that a "Dockerfile" is in the current workspace
@@ -10,6 +9,7 @@ pipeline {
     }
   }
   stages {
+    dir("${JENKINS_HOME}/workspace/Example6")  
     stage("foo") {
       steps {
         sh 'cat /app/index.py'
